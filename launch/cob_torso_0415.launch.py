@@ -23,7 +23,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     # urdf = os.path.join(get_package_share_directory("cob_hardware_config"),"robots","cob4-25","urdf","cob4-25-copy.urdf")
 
-    urdf_file = os.path.join(get_package_share_directory("cob_sim"),"urdf","cob4-25_0415_torso_arm.urdf")
+    urdf_file = os.path.join(get_package_share_directory("cob_sim"),"urdf","cob4-25_0415_with_arm.urdf")
     # Error using xacro file
     world_file = os.path.join(get_package_share_directory("cob_sim"),"world","boxes.world")
     # world_file = os.path.join(get_package_share_directory("cob_hardware_config"),"robots","cob4-25","urdf","ball.world")
@@ -69,7 +69,19 @@ def generate_launch_description():
 
     load_torso_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
-             'joint_trajectory_controller'],
+             'torso_controller'],
+        output='screen'
+    )
+
+    load_left_arm_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+             'left_arm_controller'],
+        output='screen'
+    )
+
+    load_right_arm_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+             'right_arm_controller'],
         output='screen'
     )
 
@@ -136,5 +148,7 @@ def generate_launch_description():
         # joint_state_publisher_node,
         robot_state_publisher_node,
         load_torso_controller,
+        load_left_arm_controller,
+        load_right_arm_controller
         # rviz_node
     ])
