@@ -554,7 +554,7 @@
 
   <!-- torso -->
   <joint name="torso_base_joint" type="fixed">
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.26411"/>
+    <origin rpy="0.0 0.0 3.1416" xyz="0.0 0.0 0.26411"/>
     <parent link="base_link"/>
     <child link="torso_base_link"/>
   </joint>
