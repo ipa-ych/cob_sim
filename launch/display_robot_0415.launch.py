@@ -13,7 +13,7 @@ import subprocess
 def generate_launch_description():
 
     # xacro_file= os.path.join(get_package_share_directory("cob_hardware_config"),"robots","cob4-25","urdf","cob4-25.urdf-base.xacro")
-    xacro_file= os.path.join(get_package_share_directory("cob_sim"),"urdf","cob_right_arm_0415.urdf")
+    xacro_file= os.path.join(get_package_share_directory("cob_sim"),"urdf","cob4-25_0415_torso_arm.urdf")   # cob_right_arm_0415.urdf
     doc = xacro.parse(open(xacro_file))
     xacro.process_doc(doc)
     robot_description = {'robot_description': doc.toxml()}
