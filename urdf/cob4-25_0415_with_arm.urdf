@@ -2062,6 +2062,120 @@
       <filterJointsParam>joint_names</filterJointsParam>
     </plugin>
   </gazebo> -->
+  <!-- ros2_control right arm -->
+  <ros2_control name="RightArmSystem" type="system">
+    <hardware>
+      <!-- By default, set up controllers for simulation. This won't work on real hardware -->
+      <!-- <plugin>mock_components/GenericSystem</plugin> -->
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="arm_right_1_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_right_2_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_right_3_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_right_4_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_right_5_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_right_6_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_right_7_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+  <!-- ros2_control left arm   -->
+  <ros2_control name="LeftArmSystem" type="system">
+    <hardware>
+      <!-- By default, set up controllers for simulation. This won't work on real hardware -->
+      <!-- <plugin>mock_components/GenericSystem</plugin> -->
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="arm_left_1_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_left_2_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_left_3_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_left_4_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_left_5_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_left_6_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="arm_left_7_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
   <!-- load ros2_control config file -->
   <gazebo>
     <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
