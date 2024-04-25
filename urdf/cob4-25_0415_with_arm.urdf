@@ -797,6 +797,7 @@
   <gazebo reference="torso_cam3d_left_link">
     <sensor name="torso_cam3d_left_depth_frame" type="depth">
       <always_on>true</always_on>
+      <visualize>true</visualize>
       <update_rate>15.0</update_rate>
       <camera>
         <horizontal_fov>1.4870205226991688</horizontal_fov>
@@ -887,6 +888,7 @@
   <gazebo reference="torso_cam3d_right_link">
     <sensor name="torso_cam3d_right_depth_frame" type="depth">
       <always_on>true</always_on>
+      <visualize>true</visualize>
       <update_rate>15.0</update_rate>
       <camera>
         <horizontal_fov>1.4870205226991688</horizontal_fov>
@@ -976,6 +978,7 @@
   <gazebo reference="torso_cam3d_down_link">
     <sensor name="torso_cam3d_down_depth_frame" type="depth">
       <always_on>true</always_on>
+      <visualize>true</visualize>
       <update_rate>15.0</update_rate>
       <camera>
         <horizontal_fov>1.4870205226991688</horizontal_fov>
